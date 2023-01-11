@@ -12,7 +12,7 @@ class YqIeCrawler(BaseCrawler):
     ip yqie crawler, http://ip.yqie.com/ipproxy.htm
     """
     urls = [BASE_URL]
-
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies

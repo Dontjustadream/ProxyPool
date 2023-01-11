@@ -11,7 +11,8 @@ class Ip89Crawler(BaseCrawler):
     89ip crawler, http://api.89ip.cn
     """
     urls = [BASE_URL]
-    
+    ignore = True
+
     def parse(self, html):
         """
         parse html file to get proxies

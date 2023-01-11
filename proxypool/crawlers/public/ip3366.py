@@ -12,7 +12,7 @@ class IP3366Crawler(BaseCrawler):
     ip3366 crawler, http://www.ip3366.net/
     """
     urls = [BASE_URL.format(stype=stype,page=i) for stype in range(1,3) for i in range(1, 8)]
-    
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies

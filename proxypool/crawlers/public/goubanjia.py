@@ -11,7 +11,7 @@ class GoubanjiaCrawler(BaseCrawler):
     ip  Goubanjia crawler, http://www.goubanjia.com/
     """
     urls = [BASE_URL]
-    
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies

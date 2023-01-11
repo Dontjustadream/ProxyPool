@@ -11,7 +11,7 @@ class TaiyangdailiCrawler(BaseCrawler):
     taiyangdaili crawler, http://www.taiyanghttp.com/free/
     """
     urls = [BaseUrl.format(num=i) for i in range(1, 6)]
-
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies

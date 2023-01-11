@@ -10,7 +10,7 @@ class FatezeroCrawler(BaseCrawler):
     Fatezero crawler,http://proxylist.fatezero.org
     """
     urls = [BASE_URL]
-    
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies

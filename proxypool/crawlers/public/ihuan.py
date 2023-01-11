@@ -12,7 +12,7 @@ class IhuanCrawler(BaseCrawler):
     """
     path = time.strftime("%Y/%m/%d/%H", time.localtime())
     urls = [BASE_URL.format(path=path)]
-    ignore = False
+    ignore = True
 
     def parse(self, html):
         """

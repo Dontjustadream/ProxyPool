@@ -14,7 +14,7 @@ class SeoFangFaCrawler(BaseCrawler):
     seo方法 crawler, https://proxy.seofangfa.com/
     """
     urls = ["https://proxy.seofangfa.com/"]
-
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies

@@ -26,9 +26,9 @@ def index():
     get home page, you can define your own templates
     :return:
     """
-    return '<h2>Welcome to Proxy Pool System</h2>'
-
-
+    # return '<h2>Welcome to Proxy Pool System</h2>'
+    conn = get_conn()
+    return conn.random().string()
 @app.route('/random')
 def get_proxy():
     """
@@ -39,20 +39,20 @@ def get_proxy():
     return conn.random().string()
 
 
-@app.route('/all')
-def get_proxy_all():
-    """
-    get a random proxy
-    :return: get a random proxy
-    """
-    conn = get_conn()
-    proxies = conn.all()
-    proxies_string = ''
-    if proxies:
-        for proxy in proxies:
-            proxies_string += str(proxy) + '\n'
-
-    return proxies_string
+# @app.route('/all')
+# def get_proxy_all():
+#     """
+#     get a random proxy
+#     :return: get a random proxy
+#     """
+    # conn = get_conn()
+    # proxies = conn.all()
+    # proxies_string = ''
+    # if proxies:
+    #     for proxy in proxies:
+    #         proxies_string += str(proxy) + '\n'
+    #
+    # return proxies_string
 
 
 @app.route('/count')

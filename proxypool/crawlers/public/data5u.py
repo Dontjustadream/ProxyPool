@@ -11,7 +11,7 @@ class Data5UCrawler(BaseCrawler):
     data5u crawler, http://www.data5u.com
     """
     urls = [BASE_URL]
-
+    ignore = True
     def parse(self, html):
         """
         parse html file to get proxies
